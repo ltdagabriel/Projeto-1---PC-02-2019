@@ -2,9 +2,9 @@ public class Spectator implements Runnable {
     private Hall hall;
     private String name;
 
-    public Spectator(Hall hall) {
+    public Spectator(Hall hall, String name) {
         this.hall = hall;
-        name = String.valueOf(Thread.currentThread().getName());
+        this.name = name;
     }
 
     public void enter() {

@@ -5,10 +5,10 @@ class Immigrant implements Runnable {
     private String name;
 
 
-    public Immigrant(Hall hall) {
+    public Immigrant(Hall hall, String name) {
 
         this.hall = hall;
-        name = String.valueOf(Thread.currentThread().getName());
+        this.name = name;
     }
 
     public void enter() {

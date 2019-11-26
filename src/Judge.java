@@ -3,9 +3,9 @@ public class Judge implements Runnable {
     private String name;
     private Hall hall;
 
-    public Judge(Hall hall) {
+    public Judge(Hall hall, String name) {
         this.hall = hall;
-        name = String.valueOf(Thread.currentThread().getName());
+        this.name = name;
     }
 
     public void enter() {
@@ -20,8 +20,8 @@ public class Judge implements Runnable {
 
     public void leave() throws InterruptedException {
         System.out.printf("Judge %s saiu!!%n", name);
-        // Aguarda 1 segundos para entrar dinovo
-        Thread.sleep(1_000);
+        // Aguarda 3 segundos para entrar dinovo
+        Thread.sleep(3_000);
     }
 
 
